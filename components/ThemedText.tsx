@@ -11,7 +11,7 @@ export type ThemedTextProps = TextProps & {
 export function ThemedText({
   style,
   lightColor,
-  darkColor,
+  darkColor ,
   type = 'default',
   ...rest
 }: ThemedTextProps) {
