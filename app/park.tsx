@@ -15,7 +15,7 @@ const park = () => {
       // Request permission (required on iOS)
       const { status } = await Brightness.requestPermissionsAsync();
       if (status !== 'granted') {
-        console.log('Permission not granted');
+        console.log('Permission to change brightness was denied');
         return;
       }
 
@@ -23,7 +23,7 @@ const park = () => {
       await Brightness.setBrightnessAsync(1);
       console.log('Brightness set to maximum');
     } catch (error) {
-      console.error('Error setting brightness:', error);
+      console.log("Error setting brightness", error);
     }
   };
 
